@@ -1,0 +1,115 @@
+/* 
+  Barra de navegacion > Movile first
+
+  1. Primero se escribieron los estilos para dispositivos moviles
+  2.Luegi se aplican cambios con media queries para pantallas grandes: Tabletas, Laptops, 
+
+
+  Estructura general
+    1. Reseteamos imagenes paddings para evitar estilos por defectos
+    2. Ussamos flexbox para alinear
+
+
+  Estilos
+
+
+  MOviles
+
+    -MEnu en columna contenido con fondo oscuro y texto claro
+
+  Tablets
+
+    -El menu se convierte en fila t vambio de fondo
+
+  Laptops
+
+    Se añade entre los espacios los elementos, se alineasn alos lados y hay afecto al parar el mouse (hover)
+
+  Escritorio
+
+    -El contenido se centra dentro de un ancho maximo para mejorar la presentacion
+
+
+
+*/
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base movile */
+body{
+  font-family: sans-serif;
+}
+
+.brand{
+  padding: 75.rem 0.5rem;
+  display:flex;
+  justify-content: center;
+}
+
+.menu{
+
+  display: flex;
+  flex-direction: column;
+  background-color: #1b2328;
+}
+
+.menu-item{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75em 0;
+}
+
+/* break point 768px > tablets */
+
+@media dcreen and (min-width: 768px) {
+  .nav{
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  .menu{
+    flex-direction: row;
+    background-color: white;
+  }
+  
+  .menu-item{
+    color: #1b2328;
+    flex-grow: 1;
+  }
+
+}
+
+/* break point 1024px >laptop */
+
+@media screen and (min-width: 1024px){
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand{
+    padding: 0;
+  }
+
+  .menu{
+    gap: 2em;
+  }
+
+  .menu-item:hover{
+    color: lightcoral;
+    cursor: pointer;
+  }
+}
+
+/* break point 1280px > Escritorio */
+
+@media screen and (min-width: 1280px){
+  .nav{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
