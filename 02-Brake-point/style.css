@@ -1,0 +1,123 @@
+/* 
+    Break points (Puntos de quiebre)
+
+    Valores especificos del ancjo de pantalla donde cambia el diseño del sitio webára adaptarce mejor a lñas dimenciones del dspositivo.
+
+    Ayuda a definir los estilos mediante los midea queries.
+    Tradicionalmente los break points se definen segun categorias comunes de los dispotivos.
+
+    Basandonos en los dispositivos::after
+
+    -Moviles pequeños: de 320px a 479px ancho de pantalla.
+    -Moviles: de 480px a 767px ancho de pantalla.
+    -Tabletas: de 768px a 1023px ancho de patalla.
+    -Escritorio de 1024px a 1279px de ancho de pantalla.
+    Pantallas grandes: 1280px y superiores ancho de pantalla.
+
+    Es recomendable usal los break points necesarios, generalmente 3 a 5, para mantener el codigo menjable.
+
+    Los media queries se recomiendan escribirlos al final del codigo css base.
+
+
+    Metodologias del diseño responsivo
+
+      1.Mobile first (primero moviles)
+
+      Primero establecemos los estilos para mobiles como baces u se usan los media queries con un "min-width" para ir ampliando uncionalidades
+
+      2.Desktop first (primero escritorio)
+
+      Primero estavlecemos los estilos para escritorio o pantallas grandes y se usab los media queries con "Max*width" y vamos reduciendo el tamaño de pantalla ajustar las funcionalidades.
+
+      
+
+*/
+
+/* Movile First - break points */
+
+/* Establecemos  estilos base para movile pequeños  hasta de 479px de ancho*/
+
+body{/* Estilo para mobiles */
+  background-color: red;
+}
+
+/* moviles medianos y grandes con min-width: 480px */
+
+@media screen and (min-width: 480px){
+  body{
+    background-color: blue;
+  }
+}
+
+
+
+/* tables con min-width: 768px */
+
+@media screen and (min-width: 768px){
+  body{
+    background-color: green;
+  }
+  
+}
+
+/* escritorio con min-width: 1024px */
+
+@media screen and (min-width: 1024px) {
+  body{
+    background-color: blueviolet;
+  }
+}
+
+/* desktop first */
+/* Definimos los estilos base para pantallas grandes 1280px y superiores */
+h1{
+  font-size: 5rem;
+  color: white;
+}
+
+/* scritorio con max-width 1279px */
+@media screen and (max-width: 1279px) {
+  h1{
+    font-size: 2rem;
+    color: powderblue;
+  }
+}
+
+
+
+
+/* tablets first */
+/* Definimos los estilos base para pantallas grandes 1280px y superiores */
+h1{
+  font-size: 5rem;
+  color: white;
+}
+
+/* scritorio con max-width 1279px */
+@media screen and (max-width: 1023px) {
+  h1{
+    font-size: 8rem;
+    color: yellow;
+  }
+}
+
+
+
+/* moviles medianos  y grandes con max-width */
+
+@media screen and (max-width: 767px) {
+  h1{
+    font-size: 2rem;
+    color: orangered;
+  }
+}
+
+
+/* moviles pequeños con max-width */
+
+@media screen and (max-width: 480px) {
+  h1{
+    font-size: 10rem;
+    color: darkblue;
+  }
+}
